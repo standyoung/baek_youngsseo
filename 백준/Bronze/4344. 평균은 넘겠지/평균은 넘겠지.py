@@ -6,8 +6,9 @@ for _ in range(C):
     score_lst = score_lst[1:]
 
     cnt = 0
+    mean = sum(score_lst)/N
     for i in range(N):
-        if score_lst[i] > (sum(score_lst)/N):
+        if score_lst[i] > mean:
             cnt += 1
     ratio = (cnt / N)*100
-    print("{}%".format(ratio))
+    print("{:.3f}%".format(ratio))
