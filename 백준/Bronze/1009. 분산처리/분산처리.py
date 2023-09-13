@@ -7,7 +7,7 @@ T = int(sys.stdin.readline().rstrip())
 lst = [
     [10],
     [1],
-    [2, 4, 6, 8],
+    [2, 4, 8, 6],
     [3, 9, 7, 1],
     [4, 6],
     [5],
@@ -15,26 +15,13 @@ lst = [
     [7, 9, 3, 1],
     [8, 4, 2, 6],
     [9, 1],
-    [0],
 ]
 
 for _ in range(T):
     a, b = map(int, sys.stdin.readline().split())
-    a = a % 10
-
-    if a in [1, 5, 6]:
-        print(a)
-    elif a in [4, 9]:
-        b = b % 2
-        if b == 0:  # 지수가 짝수
-            print((a**2) % 10)
-        else:
-            print(a)
-    elif a in [2, 3, 7, 8]:
-        b = b % 4
-        if b == 0:
-            print((a**4) % 10)
-        else:
-            print((a**b) % 10)
-    else:  # a == 0 : 10의 배수
+    if a == 10:
         print(10)
+    else:
+        print(lst[a % 10][b % (len(lst[a % 10])) - 1])
+# ans[a%10] -> 주어진 a의 뒷자리
+# len(ans[a%10]) -> 주어진 a의 뒷자리가 정답으로 나올수있는 2차원 배열들이 담긴 배열의 길이 예) len([2,4,8,6])
