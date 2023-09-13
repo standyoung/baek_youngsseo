@@ -8,13 +8,16 @@ for _ in range(len(lst)):
         yo_lst.append(lst[K - 1])
         lst.remove(lst[K - 1])
         lst = lst[K - 1 :] + lst[: K - 1]
-    else:
+    else: # len(lst) < K
         K_ = K % len(lst)
+        # 나머지 자리로 K 구함
+        # K = 5 ; lst = [1,2,3] 이면 K % len(lst) = 2
         yo_lst.append(lst[K_ - 1])
+
         if lst[K_ - 1] != lst[-1]:
             lst.remove(lst[K_ - 1])
             lst = lst[K_ - 1 :] + lst[: K_ - 1]
-        else:
+        else: # 빼려는 수가 끝에 있다면 리스트 그냥 냅두기
             lst.remove(lst[K_ - 1])
     # print(yo_lst)
     # print(yo_lst[-1])
