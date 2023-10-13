@@ -10,6 +10,23 @@
 # que.empty()
 # que.full()
 
+###############################
+
+# from collections import deque
+
+# st = []
+# q = []
+# deq = deque()
+
+# deq.appendleft(1)
+# deq.popleft()
+# deq.appendleft(2)
+
+# st.append(1)
+# st.append(2)
+# st.pop(0)
+# print(st)
+
 import sys
 from collections import deque
 
