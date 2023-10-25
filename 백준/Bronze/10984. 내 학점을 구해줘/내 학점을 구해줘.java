@@ -17,6 +17,9 @@ public class Main {
                 score += c*g;
             }
             System.out.println(c_sum+" "+Math.round(score/c_sum*10)/10.0);
+            // Math.round() : 소수점 n번째 자리까지 남고기자 할 때의 코드,
+            // n+1번째 자리에서 반올림한다.
+            // Math.round(e*m)/m
         }
         }
     }
