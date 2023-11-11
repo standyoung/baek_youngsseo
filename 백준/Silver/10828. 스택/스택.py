@@ -4,29 +4,29 @@ N = int(sys.stdin.readline())
 stack = []
 
 for i in range(N):
-    s = sys.stdin.readline().strip()
+    s = sys.stdin.readline().split()
 
-    if "pop" in s:
+    if s[0] == "pop":
         if len(stack) == 0:
             print(-1)
         else:
             print(stack[-1])
             stack.pop(-1)
-            
-    elif "size" in s:
+
+    elif s[0] == "size":
         print(len(stack))
-        
-    elif "empty" in s:
+
+    elif s[0] == "empty":
         if len(stack) == 0:
             print(1)
         else:
             print(0)
-            
-    elif "top" in s:
+
+    elif s[0] == "top":
         if len(stack) == 0:
             print(-1)
         else:
             print(stack[-1])
-            
-    elif "push" in s:
-        stack.append(int(s[5:]))
+
+    elif s[0] == "push":
+        stack.append(int(s[1]))
