@@ -1,14 +1,5 @@
-# import sys
-# a, b = map(int,sys.stdin.readline().split())
+import sys
 
-N = input()
-
-for i in N:
-    i = int(i)
-
-N = sorted(N)
-N = reversed(N)
-N = list(N)
-
-for i in range(len(N)):
-    print(N[i],end='')   
+n = sys.stdin.readline().strip()
+n = sorted(n, reverse=True)
+print(*n, sep="")
