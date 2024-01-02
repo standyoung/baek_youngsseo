@@ -14,13 +14,23 @@ while min_h<=max_h:
     for i in range(n):
         if h[i] >= mid:
             cnt += h[i] - mid
-    
-    # 적어도 m미터의 나무를 집에 가져가기 위해서
+    # print("cnt :",cnt)
+    # print("m :",m)
     if cnt >= m:
         min_h = mid + 1
-    # 잘린나무가 작으면 절단기가 낮아져야함
+        # print("cnt >= m => min :",min_h)
+        # print("mid :",mid)
+        # print("max_h :",max_h)
+
+    elif cnt == m:
+        print(mid)
+        exit(0)
+    # 잘린나무들이 작으면 절단기가 낮아져야함
     else:
         max_h = mid - 1
+        # print("cnt <  m => min :",max_h)
+        # print("mid :",mid)
+        # print("min_h :",min_h)
 
 # 나무의 높이가 최대한 높아야하므로
 print(max_h)
