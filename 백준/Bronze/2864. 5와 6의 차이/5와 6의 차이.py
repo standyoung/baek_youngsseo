@@ -1,25 +1,13 @@
 a, b = map(str, input().split())
-a = list(a)
-b = list(b)
 
-for i in range(len(a)):
-    if a[i] == '6':
-        a[i] = '5'
+a = a.replace('6', '5')
+b = b.replace('6', '5')
 
-for i in range(len(b)):
-    if b[i] == '6':
-        b[i] = '5'
+minn = int(a) + int(b)
 
-minn = int(''.join(a)) + int(''.join(b))
+a = a.replace('5', '6')
+b = b.replace('5', '6')
 
-for i in range(len(a)):
-    if a[i] == '5':
-        a[i] = '6'
-
-for i in range(len(b)):
-    if b[i] == '5':
-        b[i] = '6'
-
-maxx = int(''.join(a)) + int(''.join(b))
+maxx = int(a) + int(b)
 
 print(minn, maxx)
