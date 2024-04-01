@@ -8,5 +8,5 @@ for i in range(n):
 
 lst.sort()
 
-for i in range(n):
-    print(*lst[i], sep=" ")
+for x, y in lst:
+    print(x, y)
